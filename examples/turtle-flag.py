@@ -1,5 +1,9 @@
 from turtle import *
 
+# Please tag us if used!
+# We'd love to see what you make:
+# @ScienceOxford
+
 # Instructions to draw and fill a rectangular flag segment
 def rect(w, h):
     begin_fill()
@@ -17,12 +21,12 @@ def move_y(h):
     forward(h)
     right(90)
     pendown()
-    
+
 def move_x(w):
     penup()
     forward(w)
     pendown()
-    
+
 # Instructions to set the starting position, to centrally align the flag
 def start_pos(w, h):
     penup()
