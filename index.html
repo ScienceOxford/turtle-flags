@@ -16,7 +16,7 @@
 
   <div id="intro">
     <p>Resources for the 'Digital Flag Design' Creative Computing Club.</p>
-    <p>...</p>
+    <p>During this workshop, you will use Python's Turtle module to draw flags, for <a href="https://codeweek.eu/" target="_blank">Europe Code Week</a>.</p>
     <p>This page recaps what <a href="https://bit.ly/Oct21CCC" target="_blank">we discussed as a group</a>.</p>
     <p>To skip to the examples and ideas, <a href="#extensions">click here</a>.</p>
     <br>
@@ -24,18 +24,73 @@
 
   <div id="starter" class="left">
     <h3>Getting started</h3>
-    <p>...</p>
+    <p>Load the <a href="https://raw.githubusercontent.com/ScienceOxford/turtle-flags/main/examples/turtle-starter.py" target="_blank">starter code</a> into <a href="https://codewith.mu/" target="_blank">Mu editor</a>.</p>
+    <p>Click the <strong>Mode</strong> button in Mu's toolbar, and select 'Python 3'.</p>
+    <br>
+    <p>Test out the code by pressing the <strong>Run</strong> button. What happens?</p>
+    <p>Modify the starter code to change the behaviour:</p>
+    <pre>bgcolor('whitesmoke')
+color('blue', 'pink')
+height = 100
+width = 200</pre>
+    <br>
+    <p>The first two lines effect the colour of the shape. <a href="https://trinket.io/docs/colors" target="_blank">Click here to see other colour options</a>.</p>
+    <p>The second two lines effect the size of the shape. That happens if you swap the two numbers?</p>
+    <br>
+  </div>
+
+  <div id="for-loops" class="left">
+    <h3>Add a 'for loop'</h3>
+    <p>The current program has two sections of code that are identical:</p>
+    <pre>forward(width)
+left(90)
+forward(height)
+left(90)</pre>
+    <br>
+    <p>Instead of repeating this, you can write a new line of code, to ask the computer to do it twice:</p>
+    <pre>for i in range(2):
+    forward(width)
+    left(90)
+    forward(height)
+    left(90)</pre>
+    <br>
+    <p>The number at the end of that first line <code>range(2)</code>, is how many times you want the code to repeat.</p>
+    <p>Edit your code to add this loop, instead of having the code written twice.</p>
+    <br>
+    <p><strong>Test your code - does it still work exactly the same way as it did before?</strong></p>
+    <br>
+  </div>
+
+  <div id="moving" class="left">
+    <h3>Move the turtle</h3>
+    <p></p>
+    <br>
+  </div>
+
+  <div id="second-rectangle" class="left">
+    <h3>Add a second rectangle</h3>
+    <p></p>
+    <br>
+  </div>
+
+  <div id="algorithm" class="left">
+    <h3>Write an algorithm for your chosen flag</h3>
+    <p></p>
+    <br>
   </div>
 
   <div id="extensions" class="left">
     <h3>What next?</h3>
-    <p>...</p>
+    <p>Now that you know how to draw and combine rectangles, you can design your own flag.</p>
+    <p>By changing the <strong>angle</strong> that the turtle turns, you can create different shapes, such as triangles.</p>
+    <p>The links below give you some other ideas of things you could add to your program.</p>
     <br>
   </div>
 
   <nav class="links bg_green">
-    <a href="" target="_blank">...</a>
-    <a href="" target="_blank">...</a>
+    <a href="" target="_blank">Circles</a>
+    <a href="" target="_blank">Random colours</a>
+    <a href="" target="_blank">Functions</a>
   </nav>
 
   <footer class="links">
