@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Digital Flag Design</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Using functions</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>We always try to make Python code as efficient as possible, by not repeating things! This is why we added the <strong>for loop</strong> earlier.</p>
+    <p>Another way to improve your program is by using <strong>functions</strong>. These are like recipes - you write down the instructions and give it a name, then when you want to use those instructions, you just give Python the name, and it can look back at the recipe to see what to do.</p>
+    <p>These instructions use the <a href="https://raw.githubusercontent.com/ScienceOxford/turtle-flags/main/examples/turtle-two-rectangles.py" target="_blank">code with two rectangles</a>
+    <p>The bit of the code that is repeated in the program is this:</p>
+    <pre>begin_fill()
+for i in range(2):
+    forward(width)
+    left(90)
+    forward(height)
+    left(90)
+end_fill()</pre>
+    <p>To turn this into a function, go to the top of your program. After any lines that start with <code>import</code> define your function like this:</p>
+    <pre>def rectangle():
+    begin_fill()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(height)
+        left(90)
+    end_fill()</pre>
+    <br>
+    <p>You now have the recipe for a <strong>rectangle</strong>.</p>
+    <p>Now, wherever you used this code further down in your program, replace it with this code:</p>
+    <pre>rectangle()</pre>
+    <br>
+    <p>The full code, for two rectangles of different colours, would look like this:</p>
+    <pre>from turtle import *
+
+def rectangle():
+    begin_fill()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(height)
+        left(90)
+    end_fill()
+
+bgcolor('whitesmoke')
+
+color('blue', 'pink')
+height = 100
+width = 200
+
+rectangle()
+
+penup()
+left(90)
+forward(height)
+right(90)
+pendown()
+
+color('green', 'yellow')
+
+rectangle()</pre>
+    <br>
+    <p><strong>Try it out in your own program, then see if you can create a function to move the turtle as well.</strong></p>
+  </div>
+
+  <nav class="links bg_pink">
+    <a href="index.html" target="_blank">Go Back</a>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/turtle-flags/" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
