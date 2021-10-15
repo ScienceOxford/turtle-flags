@@ -63,19 +63,65 @@ left(90)</pre>
 
   <div id="moving" class="left">
     <h3>Move the turtle</h3>
-    <p></p>
+    <p>Now you have drawn a single rectangle, and the turtle is back where it started.</p>
+    <p>To draw a second rectangle above the one you just drew, you need to move the turtle.</p>
+    <p>What would the turtle need to do to move to here:</p>
+    <img src=".\images\move-turtle.png" alt="left: turtle on bottom left, facing right; centre: arrow pointing to next picture; right: turtle on top left facing right" width="600px" height="auto">
+    <br>
+    <p>To move to the next location, the turtle needs to:</p>
+    <ul>
+        <li>Turn <code>left(90)</code>, so that it is pointing up.</li>
+        <li>Move <code>forward</code> by the <code>height</code> of the rectangle, to get to the top corner.</li>
+        <li>Turn <code>right(90)</code> so that it is pointing in the correct direction.</li>
+    </ul>
+    <p>We can also add a couple of extra lines to make the turtle stop drawing while it moves.</p>
+    <p>The code for all of this is:</p>
+    <pre>penup()
+left(90)
+forward(height)
+right(90)
+pendown()</pre>
+    <br>
+    <p>Add the new code <strong>underneath</strong> everything that is in your program so far.</p>
+    <p>Test it - does your first rectangle still get drawn, and is the turtle in the right place?</p>
     <br>
   </div>
 
   <div id="second-rectangle" class="left">
     <h3>Add a second rectangle</h3>
-    <p></p>
+    <p>We can add a second rectangle now that the turtle is in the right place.</p>
+    <p>If we want the second rectangle to be the same size as the first one, but a different colour, we need to write the following algorithm:</p>
+    <ol>
+        <li>Set the colour of the new rectangle.</li>
+        <li>Start the fill.</li>
+        <li>Draw the new rectangle.</li>
+        <li>End the fill.</li>
+    </ol>
+    <p>All of this code is already in your program from the first rectangle - you can copy and paste it <strong>underneath</strong> everything that is already there.</p>
+    <p><a href="https://raw.githubusercontent.com/ScienceOxford/turtle-flags/main/examples/turtle-two-rectangles.py" target="_blank">An example of this code is here.</a></p>
     <br>
   </div>
 
   <div id="algorithm" class="left">
     <h3>Write an algorithm for your chosen flag</h3>
-    <p></p>
+    <p>Most flags have at least two rectangles! <a href="https://en.wikipedia.org/wiki/Flags_of_Europe" target="_blank">Choose a flag to draw</a>, and think about the algorithm you need to draw it.</p>
+    <p>For example, the Austrian flag:</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/1280px-Flag_of_Austria.svg.png" alt="Austrian flag - vertical stripes red white red" width="400px" height="auto">
+    <br>
+    <p>An algorithm for this could be:</p>
+    <ul>
+        <li>Set the colour to red, red</li>
+        <li>Set the height to 50 and the width to 200</li>
+        <li>Draw the first rectangle</li>
+        <li>Move the turtle to the top left</li>
+        <li>Set the colour to white, white</li>
+        <li>Draw the second rectangle</li>
+        <li>Move the turtle to the top left</li>
+        <li>Set the colour to red, red</li>
+        <li>Draw the third rectangle</li>
+    </ul>
+    <br>
+    <p><strong>Have a go yourself!</strong></p>
     <br>
   </div>
 
@@ -83,12 +129,12 @@ left(90)</pre>
     <h3>What next?</h3>
     <p>Now that you know how to draw and combine rectangles, you can design your own flag.</p>
     <p>By changing the <strong>angle</strong> that the turtle turns, you can create different shapes, such as triangles.</p>
+    <p>You can also draw circles by using <code>circle(100)</code> - try it out!</p>
     <p>The links below give you some other ideas of things you could add to your program.</p>
     <br>
   </div>
 
   <nav class="links bg_green">
-    <a href="" target="_blank">Circles</a>
     <a href="" target="_blank">Random colours</a>
     <a href="" target="_blank">Functions</a>
   </nav>
