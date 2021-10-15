@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Digital Flag Design</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Random Colours</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>Instead of choosing the colours for your flag before you start, you can get the computer to choose for you!</p>
+    <p>There are two ways to do this:</p>
+    <ul>
+        <li>Make a list of colors you like, and let the computer choose between them - <a href="#choice">click here for instructions.</a></li>
+        <li>Let the computer make any colour in the universe - <a href="#randint">click here for instructions</a>.</li>
+    </ul>
+    <br>
+  </div>
+
+  <div id="choice" class="left">
+    <h3>Choosing randomly from a list of colours</h3>
+    <p>At the very start of your program, add this line:</p>
+    <pre>from random import choice</pre>
+    <br>
+    <p>This <em>imports a library</em>, and tells Python that you want to use these new bits of code.</p>
+    <p>Next, you need to choose your colours, and put them into your program in a <strong>list</strong>, which is a special type of Python data.</p>
+    <pre>my_colours = ["green", "pink", "blue", "orange"]</pre>
+    <br>
+    <p>This puts all of your chosen colours together, and calls the group <code>my_colours</code>.</p>
+    <br>
+    <p>Decide what part of your program you want to use the random colours in - for example, do you want your first rectangle to be a random colour?</p>
+    <p>Find the bit of your code that chooses a colour, it will look somethinglike this at the moment:</p>
+    <pre>color('green', 'yellow')</pre>
+    <br>
+    <p>Change this line, so that it now looks like this:</p>
+    <pre>color(choice(my_colours), choice(my_colours))</pre>
+    <br>
+    <p>The computer will now choose a random outline, and a random fill colour, from the list you made!</p>
+    <br>
+  </div>
+
+  <div id="randint" class="left">
+    <h3>Choosing any colour</h3>
+    <p>At the very start of your program, add this line:</p>
+    <pre>from random import randint</pre>
+    <br>
+    <p>This <em>imports a library</em>, and tells Python that you want to use these new bits of code.</p>
+    <br>
+    <p>If you want to use any colour that exists, you can't use the colour names any more. Instead, we choose the amount of <strong>R</strong>ed, <strong>G</strong>reen, and <strong>B</strong>lue make up the colour.</p>
+    <ul>
+        <li style = "color:rgb(255, 0, 0)">Red = [255, 0, 0]</li>
+        <li style = "color:rgb(0, 255, 0)">Green = [0, 255, 0]</li>
+        <li style = "color:rgb(0, 0, 255)">Blue = [0, 0, 255]</li>
+        <li style = "color:rgb(128, 0, 128)">Purple = [128, 0, 128]</li>
+        <li style = "color:rgb(255, 165, 0)">Orange = [255, 165, 0]</li>
+        <li style = "color:rgb(0, 0, 0)">Black = [0, 0, 0]</li>
+        <li style = "color:rgb(100, 100, 100)">Grey = [100, 100, 100]</li>
+    </ul>
+    <br>
+    <p>To use this new system in your program, you need to change the <code>colormode</code>, to tell it you are using <strong>RGB</strong> instead of <strong>names</strong>. If you want to use both types of colours in your program, you will need to change the colour mode every time.</p>
+    <p>Decide what part of your program you want to use the random colours in - for example, do you want your first rectangle to be a random colour?</p>
+    <p>Find the bit of your code that chooses a colour, it will look somethinglike this at the moment:</p>
+    <pre>color('green', 'yellow')</pre>
+    <br>
+    <p>Replace this line this the below code:</p>
+    <pre>colormode(255)
+color(randint(0,255), randint(0,255), randint(0,255))
+colormode(1)</pre>
+    <br>
+    <p>This changes the colormode, sets a random amount of red green and blue for your colour, then changes the colormode back (so you can keep using names in other parts of your program).</p>
+    <br>
+  </div>
+
+  <nav class="links bg_pink">
+    <a href="index.html" target="_blank">Go Back</a>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/turtle-flags/" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
